@@ -6,6 +6,7 @@
 // one at https://mozilla.org/MPL/2.0/.
 
 using System;
+using Vlingo.Actors.TestKit;
 
 namespace Vlingo.Actors.Examples.PingPong
 {
@@ -14,21 +15,24 @@ namespace Vlingo.Actors.Examples.PingPong
         static void Main(string[] args)
         {
             var world = World.Start("playground");
+            var until = TestUntil.Happenings(1);
 
             var pinger = world.ActorFor<IPinger>(
                 Definition.Has<PingerActor>(
-                    Definition.NoParameters));
+                    Definition.Parameters(until)));
 
             var ponger = world.ActorFor<IPonger>(
                 Definition.Has<PongerActor>(
-                    Definition.NoParameters));
+                    Definition.Parameters(until)));
 
             pinger.Ping(ponger);
 
-            Console.WriteLine("Press any key to end the world...");
-            Console.ReadKey();
+            until.Completes();
 
             world.Terminate();
+
+            Console.WriteLine("Press any key to end the world...");
+            Console.ReadKey();
         }
     }
 }
