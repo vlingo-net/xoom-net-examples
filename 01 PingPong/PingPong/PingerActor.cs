@@ -14,30 +14,32 @@ namespace Vlingo.Actors.Examples.PingPong
     {
         private int count;
         private readonly TestUntil _until;
+        private readonly IPinger self;
 
         public PingerActor(TestUntil until)
         {
             count = 0;
             _until = until;
+            self = SelfAs<IPinger>();
         }
 
         public void Ping(IPonger ponger)
         {
             if (++count >= 10)
             {
-                this.Stop();
+                self.Stop();
                 ponger.Stop();
             }
             else
             {
                 Console.WriteLine($"Pinger {this.Address} - Doing Ping...");
-                ponger.Pong(this);
+                ponger.Pong(self);
             }
         }
 
         protected override void AfterStop()
         {
-            Console.WriteLine("Pinger " + this.Address + " just stopped!");
+            Console.WriteLine($"Pinger {this.Address} just stopped!");
             _until.Happened();
         }
     }
