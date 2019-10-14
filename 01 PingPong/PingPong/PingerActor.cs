@@ -5,31 +5,40 @@
 // was not distributed with this file, You can obtain
 // one at https://mozilla.org/MPL/2.0/.
 
+using System;
+using Vlingo.Actors.TestKit;
+
 namespace Vlingo.Actors.Examples.PingPong
 {
     public class PingerActor : Actor, IPinger
     {
         private int count;
-        private readonly IPinger self;
+        private readonly TestUntil _until;
 
-        public PingerActor()
+        public PingerActor(TestUntil until)
         {
             count = 0;
-            self = SelfAs<IPinger>();
+            _until = until;
         }
 
         public void Ping(IPonger ponger)
         {
-            if(++count >= 10)
+            if (++count >= 10)
             {
-                self.Stop();
+                this.Stop();
                 ponger.Stop();
-                System.Console.WriteLine("Enough ping/pong. Stopped now.");
             }
             else
             {
-                ponger.Pong(self);
+                Console.WriteLine($"Pinger {this.Address} - Doing Ping...");
+                ponger.Pong(this);
             }
+        }
+
+        protected override void AfterStop()
+        {
+            Console.WriteLine("Pinger " + this.Address + " just stopped!");
+            _until.Happened();
         }
     }
 }

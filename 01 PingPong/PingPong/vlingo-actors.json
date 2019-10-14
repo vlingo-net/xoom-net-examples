@@ -1,0 +1,19 @@
+﻿{
+  "plugin": {
+    "name": {
+      "queueMailbox": true,
+      "consoleLogger": true
+    },
+    "queueMailbox": {
+      "classname": "Vlingo.Actors.Plugin.Mailbox.ConcurrentQueue.ConcurrentQueueMailboxPlugin",
+      "defaultMailbox": true,
+      "numberOfDispatchersFactor": 1,
+      "dispatcherThrottlingCount": 10
+    },
+    "consoleLogger": {
+      "classname": "Vlingo.Actors.Plugin.Logging.Console.ConsoleLoggerPlugin",
+      "name": "vlingo-net/actors",
+      "defaultLogger": true
+    }
+  }
+}

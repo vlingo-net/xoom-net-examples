@@ -7,11 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Vlingo.Actors" Version="0.3.5" />
+    <PackageReference Include="Vlingo.Actors" Version="0.4.5" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="vlingo-actors.properties">
+    <None Update="vlingo-actors.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
