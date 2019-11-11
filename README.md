@@ -1,4 +1,4 @@
-# vlingo-net-actors-examples
+# vlingo-net-examples
 Various examples using [Vlingo .NET Actors](https://github.com/vlingo-net/vlingo-net-actors) library
 
 ## Examples
