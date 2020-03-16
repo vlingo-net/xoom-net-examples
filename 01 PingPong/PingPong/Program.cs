@@ -16,12 +16,10 @@ namespace Vlingo.Actors.Examples.PingPong
             var world = World.Start("playground");
 
             var pinger = world.ActorFor<IPinger>(
-                Definition.Has<PingerActor>(
-                    Definition.NoParameters));
+                () => new PingerActor());
 
             var ponger = world.ActorFor<IPonger>(
-                Definition.Has<PongerActor>(
-                    Definition.NoParameters));
+                () => new PongerActor());
 
             pinger.Ping(ponger);
 
