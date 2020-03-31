@@ -5,20 +5,23 @@
 // was not distributed with this file, You can obtain
 // one at https://mozilla.org/MPL/2.0/.
 
+using System;
+
 namespace Vlingo.Actors.Examples.PingPong
 {
     public class PongerActor : Actor, IPonger
     {
-        private readonly IPonger self;
+        private readonly IPonger _self;
 
         public PongerActor()
         {
-            self = SelfAs<IPonger>();
+            _self = SelfAs<IPonger>();
         }
 
         public void Pong(IPinger pinger)
         {
-            pinger.Ping(self);
+            Console.WriteLine($"Ponging back to pinger...");
+            pinger.Ping(_self);
         }
     }
 }
