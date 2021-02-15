@@ -9,20 +9,18 @@
   <Choose>
     <When Condition="'$(Configuration)' == 'Debug With Project References'">
       <ItemGroup>
-        <ProjectReference Include="..\..\..\vlingo-net-actors\src\Vlingo.Actors\Vlingo.Actors.csproj" />
+        <ProjectReference Include="..\..\..\..\..\vlingo-net-actors\src\Vlingo.Actors\Vlingo.Actors.csproj" />
+        <ProjectReference Include="..\..\..\..\..\vlingo-net-symbio\src\Vlingo.Symbio\Vlingo.Symbio.csproj" />
+        <ProjectReference Include="..\..\..\..\..\vlingo-net-lattice\src\Vlingo.Lattice\Vlingo.Lattice.csproj" />
       </ItemGroup>
     </When>
     <Otherwise>
       <ItemGroup>
         <PackageReference Include="Vlingo.Actors" Version="$(VlingoVersion)" />
+        <PackageReference Include="Vlingo.Symbio" Version="$(VlingoVersion)" />
+        <PackageReference Include="Vlingo.Lattice" Version="$(VlingoVersion)" />
       </ItemGroup>
     </Otherwise>
   </Choose>
-
-  <ItemGroup>
-    <None Update="vlingo-actors.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
 
 </Project>
