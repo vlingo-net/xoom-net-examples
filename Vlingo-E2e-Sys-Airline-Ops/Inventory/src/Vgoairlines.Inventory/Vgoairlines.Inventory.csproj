@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>Vgoairlines.Inventory</RootNamespace>
+    <Configurations>Debug;Release;Debug With Project References</Configurations>
+  </PropertyGroup>
+
+  <Choose>
+    <When Condition="'$(Configuration)' == 'Debug With Project References'">
+      <ItemGroup>
+        <ProjectReference Include="..\..\..\vlingo-net-actors\src\Vlingo.Actors\Vlingo.Actors.csproj" />
+      </ItemGroup>
+    </When>
+    <Otherwise>
+      <ItemGroup>
+        <PackageReference Include="Vlingo.Actors" Version="$(VlingoVersion)" />
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+
+  <ItemGroup>
+    <None Update="vlingo-actors.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
