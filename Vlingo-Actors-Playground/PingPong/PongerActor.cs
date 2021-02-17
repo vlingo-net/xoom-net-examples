@@ -13,10 +13,7 @@ namespace Vlingo.Actors.Examples.PingPong
     {
         private readonly IPonger _self;
 
-        public PongerActor()
-        {
-            _self = SelfAs<IPonger>();
-        }
+        public PongerActor() => _self = SelfAs<IPonger>();
 
         public void Pong(IPinger pinger)
         {
