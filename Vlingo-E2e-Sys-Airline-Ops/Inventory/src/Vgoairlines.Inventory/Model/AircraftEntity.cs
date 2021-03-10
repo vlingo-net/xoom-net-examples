@@ -16,11 +16,6 @@ namespace Vgoairlines.Inventory.Model
         
         public AircraftEntity(string id) : base(id) => _state = AircraftState.IdentifiedBy(id);
 
-        protected override void OnStateObject(AircraftState stateObject)
-        {
-            // TODO: check if not duplicated with State property
-        }
-
         protected override void State(AircraftState state) => _state = state;
 
         public ICompletes<AircraftState> Consign(Registration registration, ManufacturerSpecification manufacturerSpecification, Carrier carrier)
