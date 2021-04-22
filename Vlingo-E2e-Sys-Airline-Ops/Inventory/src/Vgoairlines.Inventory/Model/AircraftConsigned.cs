@@ -6,7 +6,7 @@
 // one at https://mozilla.org/MPL/2.0/.
 
 using System;
-using Vlingo.Common.Version;
+using Vlingo.Xoom.Common.Version;
 using Vlingo.Lattice.Model;
 
 namespace Vgoairlines.Inventory.Model
