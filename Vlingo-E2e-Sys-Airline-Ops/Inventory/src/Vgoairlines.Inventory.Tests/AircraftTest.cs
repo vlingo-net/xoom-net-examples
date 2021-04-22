@@ -8,7 +8,7 @@
 using System;
 using System.Collections.Generic;
 using Vlingo.Actors;
-using Vlingo.Common;
+using Vlingo.Xoom.Common;
 using Vlingo.Lattice.Model.Stateful;
 using Vlingo.Symbio;
 using Vlingo.Symbio.Store.Dispatch;
