@@ -5,9 +5,7 @@
 // was not distributed with this file, You can obtain
 // one at https://mozilla.org/MPL/2.0/.
 
-using Vlingo.Xoom.Actors;
-
-namespace Vlingo.Actors.Examples.PingPong
+namespace Vlingo.Xoom.Actors.Examples.PingPong
 {
     public interface IPinger : IStoppable
     {
