@@ -5,7 +5,7 @@
 // was not distributed with this file, You can obtain
 // one at https://mozilla.org/MPL/2.0/.
 
-using System;
+using Vlingo.Xoom.Actors;
 
 namespace Vlingo.Actors.Examples.PingPong
 {
