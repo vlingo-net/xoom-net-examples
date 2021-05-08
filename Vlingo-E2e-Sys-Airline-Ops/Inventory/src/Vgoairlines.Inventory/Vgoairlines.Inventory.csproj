@@ -10,14 +10,14 @@
     <When Condition="'$(Configuration)' == 'Debug With Project References'">
       <ItemGroup>
         <ProjectReference Include="..\..\..\..\..\xoom-net-actors\src\Vlingo.Xoom.Actors\Vlingo.Xoom.Actors.csproj" />
-        <ProjectReference Include="..\..\..\..\..\vlingo-net-symbio\src\Vlingo.Symbio\Vlingo.Symbio.csproj" />
+        <ProjectReference Include="..\..\..\..\..\xoom-net-symbio\src\Vlingo.Xoom.Symbio\Vlingo.Xoom.Symbio.csproj" />
         <ProjectReference Include="..\..\..\..\..\vlingo-net-lattice\src\Vlingo.Lattice\Vlingo.Lattice.csproj" />
       </ItemGroup>
     </When>
     <Otherwise>
       <ItemGroup>
         <PackageReference Include="Vlingo.Xoom.Actors" Version="$(VlingoVersion)" />
-        <PackageReference Include="Vlingo.Symbio" Version="$(VlingoVersion)" />
+        <PackageReference Include="Vlingo.Xoom.Symbio" Version="$(VlingoVersion)" />
         <PackageReference Include="Vlingo.Lattice" Version="0.1.7" />
       </ItemGroup>
     </Otherwise>

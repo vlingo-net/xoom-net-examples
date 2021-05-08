@@ -9,8 +9,8 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using Vgoairlines.Inventory.Model;
 using Vlingo.Xoom.Common;
-using Vlingo.Symbio;
-using Vlingo.Symbio.Store.Dispatch;
+using Vlingo.Xoom.Symbio;
+using Vlingo.Xoom.Symbio.Store.Dispatch;
 
 namespace Vgoairlines.Inventory.Tests
 {

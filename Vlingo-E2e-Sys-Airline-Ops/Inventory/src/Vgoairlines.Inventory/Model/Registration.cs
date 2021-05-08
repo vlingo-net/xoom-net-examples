@@ -5,7 +5,7 @@
 // was not distributed with this file, You can obtain
 // one at https://mozilla.org/MPL/2.0/.
 
-using Vlingo.Symbio.Store.Object;
+using Vlingo.Xoom.Symbio.Store.Object;
 
 namespace Vgoairlines.Inventory.Model
 {

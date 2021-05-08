@@ -10,10 +10,10 @@ using System.Collections.Generic;
 using Vlingo.Actors;
 using Vlingo.Xoom.Common;
 using Vlingo.Lattice.Model.Stateful;
-using Vlingo.Symbio;
-using Vlingo.Symbio.Store.Dispatch;
-using Vlingo.Symbio.Store.State;
-using Vlingo.Symbio.Store.State.InMemory;
+using Vlingo.Xoom.Symbio;
+using Vlingo.Xoom.Symbio.Store.Dispatch;
+using Vlingo.Xoom.Symbio.Store.State;
+using Vlingo.Xoom.Symbio.Store.State.InMemory;
 using Xunit;
 using Xunit.Abstractions;
 
