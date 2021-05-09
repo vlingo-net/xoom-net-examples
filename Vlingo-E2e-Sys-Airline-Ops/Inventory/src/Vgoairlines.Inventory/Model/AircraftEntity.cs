@@ -6,7 +6,7 @@
 // one at https://mozilla.org/MPL/2.0/.
 
 using Vlingo.Xoom.Common;
-using Vlingo.Lattice.Model.Stateful;
+using Vlingo.Xoom.Lattice.Model.Stateful;
 
 namespace Vgoairlines.Inventory.Model
 {

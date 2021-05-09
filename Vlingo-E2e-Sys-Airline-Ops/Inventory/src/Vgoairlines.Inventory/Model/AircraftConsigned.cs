@@ -7,7 +7,7 @@
 
 using System;
 using Vlingo.Xoom.Common.Version;
-using Vlingo.Lattice.Model;
+using Vlingo.Xoom.Lattice.Model;
 
 namespace Vgoairlines.Inventory.Model
 {
