@@ -18,7 +18,7 @@
       <ItemGroup>
         <PackageReference Include="Vlingo.Xoom.Actors" Version="$(VlingoVersion)" />
         <PackageReference Include="Vlingo.Xoom.Symbio" Version="$(VlingoVersion)" />
-        <PackageReference Include="Vlingo.Xoom.Lattice" Version="0.1.10" />
+        <PackageReference Include="Vlingo.Xoom.Lattice" Version="0.1.11" />
       </ItemGroup>
     </Otherwise>
   </Choose>
