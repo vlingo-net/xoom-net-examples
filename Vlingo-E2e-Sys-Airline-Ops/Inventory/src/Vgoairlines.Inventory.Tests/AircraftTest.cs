@@ -7,7 +7,6 @@
 
 using System;
 using System.Collections.Generic;
-using Vlingo.Actors;
 using Vlingo.Xoom.Common;
 using Vlingo.Xoom.Lattice.Model.Stateful;
 using Vlingo.Xoom.Symbio;
